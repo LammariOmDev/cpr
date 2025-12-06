@@ -1,2 +1,2 @@
 # cpr
-Liste des médicaments à Conditions Particulière de Remboursement CPR
+Liste des médicaments à Conditions Particulières de Remboursement CPR
