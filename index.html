@@ -94,6 +94,39 @@
         .btn-close {
             filter: invert(1) grayscale(100%) brightness(200%); 
         }
+
+        /* --- NOUVEAU : Optimisation Mobile (Responsive) --- */
+        @media (max-width: 768px) {
+            body { 
+                padding: 10px; /* Moins de marge autour de la page */
+            }
+            .container { 
+                padding: 10px; /* Utilisation maximale de la largeur */
+            }
+            h1 { 
+                font-size: 18px; /* Titre plus petit */
+                margin-bottom: 5px;
+            }
+            .signature {
+                margin-bottom: 10px;
+            }
+            /* Réduction de la police du tableau et des boutons */
+            .dataTables_wrapper { 
+                font-size: 11px !important; 
+            }
+            table.dataTable tbody td, table.dataTable thead th {
+                padding: 5px 4px !important; /* Cellules plus compactes */
+            }
+            .btn-sm {
+                font-size: 10px !important;
+                padding: 2px 5px !important;
+            }
+            /* Ajustement champ de recherche mobile */
+            .dataTables_filter input {
+                width: 100%;
+                margin-left: 0 !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -220,7 +253,6 @@
                 }
 
                 tableInstance = $('#monTableau').DataTable({
-                    // 3. ACTIVATION DE L'OPTION FIXED HEADER
                     fixedHeader: true,
                     
                     language: {
@@ -241,7 +273,7 @@
                         }
                     },
                     pageLength: 100, 
-                    lengthMenu: [10, 20, 50, 100, 200], 
+                    lengthMenu: [20, 50, 100, 200], 
                     order: [] 
                 });
 
@@ -265,7 +297,3 @@
 
 </body>
 </html>
-
-
-
-
